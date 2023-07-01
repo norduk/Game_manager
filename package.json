@@ -1,6 +1,6 @@
 {
-  "name": "test_app",
-  "productName": "test_app",
+  "name": "Game_manager",
+  "productName": "Game_manager",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
