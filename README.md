@@ -1,1 +1,1 @@
-# Game_manager
+# Game manager for web games
