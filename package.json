@@ -1,0 +1,16 @@
+{
+  "name": "test_app",
+  "productName": "test_app",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "valera",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "25.2.0"
+  }
+}

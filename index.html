@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ваш заголовок</title>
+  <style>
+    /* Стили для боковой панели */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #f0f0f0;
+    }
+
+    /* Стили для пунктов меню */
+    .menu-item {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    /* Стили для активного пункта меню */
+    .active {
+      background-color: #ccc;
+    }
+
+    /* Стили для webview */
+    #content-webview {
+      position: fixed;
+      top: 0;
+      left: 200px; /* Ширина бокового меню */
+      width: calc(100% - 200px); /* Ширина контента */
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar">
+    <!-- Пункты меню -->
+    <div class="menu-item active" onclick="openLink('https://www.google.com')">Меню 1</div>
+    <div class="menu-item" onclick="openLink('https://yandex.ru')">Меню 2</div>
+    <div class="menu-item" onclick="openLink('https://www.example.com/page3')">Меню 3</div>
+  </div>
+
+  <!-- webview для контента -->
+  <webview id="content-webview" src="about:blank" nodeIntegration></webview>
+
+  <script>
+    const webview = document.getElementById('content-webview');
+
+    function openLink(url) {
+      webview.src = url;
+    }
+  </script>
+</body>
+</html>
